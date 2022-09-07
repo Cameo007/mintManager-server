@@ -8,3 +8,4 @@ Dependencies:
 Works with:
 - Apache web server v2.4
 - PHP 8.1
+You need to define the path to the mintManager folder in the `$mintManagerPath` variable in token.php.
