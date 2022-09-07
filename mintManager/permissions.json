@@ -1,0 +1,45 @@
+{
+    "pasca":{
+        "xmpp":[
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl register [A-Za-z0-9]+ [a-z0-9]+ .+",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl unregister [A-Za-z0-9]+ [a-z0-9]+",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl change-password [A-Za-z0-9]+ [a-z0-9]+ .+",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl registered_users mint",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl create_room [A-Za-z0-9]+ conference\\.[a-z0-9]+ [a-z0-9]+",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl destroy_room [A-Za-z0-9]+ conference\\.[a-z0-9]+",
+            "/usr/bin/python3 /home/pasca/Bot/bot\\.py &",
+	        "pkill -9 -f bot\\.py",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl start",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl stop",
+            "/opt/ejabberd-22\\.05/bin/ejabberdctl [^&|;]+"
+        ],
+        "vpn":[
+            "pivpn register [A-Za-z0-9]+ [a-z0-9]+ .+",
+            "pivpn unregister [A-Za-z0-9]+ [a-z0-9]+",
+            "pivpn change-password [A-Za-z0-9]+ [a-z0-9]+ .+",
+            "pivpn registered_users mint",
+            "pivpn start",
+            "pivpn stop",
+            "pivpn [^&|;]+"
+        ],
+        "webserver":[
+            "service apache2 start",
+            "service apache2 stop",
+            "apachectl [^&|;]+"
+        ],
+        "adblocker":[
+            "pihole enable",
+            "pihole disable",
+            "pihole -w '[^&|;]+'",
+            "pihole -b '[^&|;]+'",
+            "pihole [^&|;]+"
+        ],
+        "system":[
+            "systemctl start ajenti",
+            "systemctl stop ajenti",
+            "systemctl restart ajenti",
+            "reboot",
+            "shutdown -h now"
+        ]
+    }
+}
